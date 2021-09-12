@@ -9,10 +9,29 @@
 </head>
 <body>
     <header>
-        
+        <section class="maintext">  
+            <h1 class="maintext__h1">
+                Calcula tu descuento
+            </h1>
+            <p class="maintext__p">
+                Ésta es una aplicación web creada para calcular el descuento de tus productos. Creada como práctica del taller 2 del <a href="https://platzi.com/clases/javascript-practico/">Curso práctico de JavaScript en Platzi 💚</a> del profesor Juan David Castro. 
+            </p>
+        </section>
     </header>
     <main>
+        <section class="card-calculadora">
+            <h2 class="card-calculadora__h2"></h2>
+            <p class="card-calculadora__p"></p>
+            <form action="" class="card-calculadora-form">
+                <label for="" class="card-calculadora-form__label"></label>
+                <input id="inputPrize" type="number" class="card-calculadora-form__input">
+                <input id="inputDiscount" type="number" class="card-calculadora-form__input">
+                <button type="button" onClick="calcularValorDescuento()" class="card-calculadora-form__button">Calcular</button>
+            </form>
+            <p id="calculadora-resultado" class="card-calculadora-resultado">
 
+            </p>
+        </section>
     </main>
     <footer>
 
