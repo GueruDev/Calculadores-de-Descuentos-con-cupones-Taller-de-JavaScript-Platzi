@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;700&display=swap" rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,32 +14,51 @@
 </head>
 <body>
     <header>
-        <section class="maintext">  
-            <h1 class="maintext__h1">
-                Calcula tu descuento
+        <section class="up">
+            <img src="src/Platzi.png" alt="logo Platzi" class="up__img">
+            <h1 class="up__h1">
+                ¡Calculadora de descuentos!
             </h1>
-            <p class="maintext__p">
-                Ésta es una aplicación web creada para calcular el descuento de tus productos. Creada como práctica del taller 2 del <a href="https://platzi.com/clases/javascript-practico/">Curso práctico de JavaScript en Platzi 💚</a> del profesor Juan David Castro. 
-            </p>
         </section>
     </header>
     <main>
+        <section class="maintext">
+            <h1 class="maintext__h2">
+                Calcula tu descuento
+            </h1>
+            <p class="maintext__p">
+                Ésta es una aplicación web creada para calcular el descuento de tus productos. Creada como práctica del taller 2 del <a href="https://platzi.com/clases/javascript-practico/">Curso práctico de JavaScript en Platzi 💚</a> del profesor Juan David Castro.
+            </p>
+        </section>
+        <section class="coupons">
+            <form action="" class="coupons-add">
+                <label for="" class="coupon-add__label">
+                    Inventa un cupón de descuento que será usado para calcular el precio final.</br>
+                    (No es requirido llenarlo)
+                </label>
+                <input id="addCouponName" type="text" class="coupon-add__input">
+                <input id="addCouponDiscount" type="number" class="coupon-add__input">
+                <button type="button" onclick="Capturar()" class="coupon-add__button">crear</button>
+            </form>
+            <div id="add" class="newcoupon">
+                <h3 class="newcoupon__h3">Nuevo Cupón</h3>
+            </div>
+        </section>
         <section class="card-calculadora">
             <h2 class="card-calculadora__h2"></h2>
             <p class="card-calculadora__p"></p>
             <form action="" class="card-calculadora-form">
-                <label for="" class="card-calculadora-form__label"></label>
-                <input id="inputPrize" type="number" class="card-calculadora-form__input">
-                <input id="inputDiscount" type="number" class="card-calculadora-form__input">
+                <label for="" class="card-calculadora-form__label">Coloca el precio original y el (0-100%)</label>
+                <input required placeholder="Precio Original" id="inputPrize" type="number" class="card-calculadora-form__input">
+                <input required placeholder="(0-100%)" id="inputDiscount" type="number" class="card-calculadora-form__input">
+                <input  placeholder="Código del cupón" id="inputCoupon" type="text" class="card-calculadora-form__input">
                 <button type="button" onClick="calcularValorDescuento()" class="card-calculadora-form__button">Calcular</button>
+                <p id="calculadora-resultado" class="card-calculadora-resultado"></p>
             </form>
-            <p id="calculadora-resultado" class="card-calculadora-resultado">
-
-            </p>
         </section>
     </main>
     <footer>
-
+        <p class="footer__p">Página creada por <a href="#" class="footer__a">SteelMods</a></p>
     </footer>
     <script src="js/app.js"></script>
 </body>

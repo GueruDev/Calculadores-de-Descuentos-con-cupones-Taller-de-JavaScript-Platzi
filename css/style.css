@@ -1,0 +1,108 @@
+/* VARIABLES */
+:root{
+    --font:'Poppins',sans-serif;
+    --sky: rgb(91, 168, 199);
+    --black: #000;
+    --white: #fff;
+}
+/* BASIC STYLES */
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size:1.6rem;
+    font-family:var(--font);
+}
+main,.up{
+    margin:0 auto;
+    width: 80%
+}
+a{
+    text-decoration:none;
+    color: var(--sky);
+}
+
+/* HEADER */
+
+header{
+    background-color: var(--black);
+    color: var(--white);
+}
+.up{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+}
+.up__h1{
+    font-size: 3.5rem;
+    margin-left:1rem;
+}
+.up__img{
+    height: 4.5rem;
+}
+
+/* MAIN */
+
+.maintext{
+    text-align: center;
+    margin: 2rem auto;
+}
+.maintext__p{
+    font-size: 2rem;
+    text-align: justify;
+}
+.card-calculadora-form{
+    display: flex;
+    flex-direction:column;
+    margin: 2rem auto;
+    padding: 2rem;
+    box-shadow: 0px 2px 18px -11px;
+    border: 2px solid black;
+    border-radius: 1rem;
+    background-color:rgb(23, 23, 143);
+    gap: 2rem;
+    width: 50%;
+
+    color: var(--white);
+}
+.card-calculadora-form__label{
+    color:rgba(255, 255, 255, 0.692);
+    text-align: center;
+    font-weight:bold;
+}
+
+.card-calculadora-form__button{
+    width: 15rem;
+    margin: 0 auto;
+    padding: 1rem 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: var(--white);
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.card-calculadora-resultado{
+    text-align: center;
+}
+
+/* FOTTER */
+
+footer{
+    text-align: center;
+    font-size: 2rem;
+    padding: 4rem 0;
+}
+.footer__a{
+    font-weight: bold;
+    color:rgb(23, 23, 143);
+}
