@@ -40,8 +40,14 @@
                 <input id="addCouponDiscount" type="number" class="coupon-add__input">
                 <button type="button" onclick="Capturar()" class="coupon-add__button">crear</button>
             </form>
-            <div id="add" class="newcoupon">
+            <div class="newcoupon">
                 <h3 class="newcoupon__h3">Nuevo Cupón</h3>
+                <table id="add" class="newcoupon-table">
+                    <tr class="newcoupon-table-tr" id="newCouponstr">
+                        <th class="newcoupon-tr__th">Código</th>
+                        <th class="newcoupon-tr__th">Descuento</th>
+                    </tr>
+                </table>
             </div>
         </section>
         <section class="card-calculadora">
