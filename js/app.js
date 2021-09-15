@@ -35,13 +35,16 @@ function agregar(){
     document.getElementById("add").innerHTML += `<p class="newcoupon__p">Código: ${couponNew.inputname} Descuento: ${couponNew.inputdiscount}</p>`;
 };
 function comparar(){
-    CouponDiscount = undefined;
+    //CouponDiscount = undefined;
     code = document.getElementById("inputCoupon").value;
     let compare = couponsList.find ( item => item.inputname == code);
-    if(code == ""){
-        console.log("No hay cupón")
-    };
-    else if (code === compare.inputname){
+    CouponDiscount = undefined;
+    if (code == ""){
+        console.log("No hay cupón");
+        console.log(CouponDiscount);
+    }
+    else if(code === compare.inputname){
         CouponDiscount = compare.inputdiscount;
+        console.log(CouponDiscount);
     };
 };
