@@ -36,9 +36,9 @@
                     Inventa un cupón de descuento que será usado para calcular el precio final.</br>
                     (No es requirido llenarlo)
                 </label>
-                <input id="addCouponName" type="text" class="coupon-add__input">
-                <input id="addCouponDiscount" type="number" class="coupon-add__input">
-                <button type="button" onclick="Capturar()" class="coupon-add__button">crear</button>
+                <input placeholder="Código" id="addCouponName" type="text" class="coupon-add__input">
+                <input placeholder="Descuento" id="addCouponDiscount" type="number" class="coupon-add__input">
+                <button type="button" onclick="Capturar()" class="coupon-add__button">Crear</button>
             </form>
             <div class="newcoupon">
                 <h3 class="newcoupon__h3">Nuevo Cupón</h3>
@@ -55,8 +55,8 @@
             <p class="card-calculadora__p"></p>
             <form action="" class="card-calculadora-form">
                 <label for="" class="card-calculadora-form__label">Coloca el precio original y el (0-100%)</label>
-                <input required placeholder="Precio Original" id="inputPrize" type="number" class="card-calculadora-form__input">
-                <input required placeholder="(0-100%)" id="inputDiscount" type="number" class="card-calculadora-form__input">
+                <input  placeholder="Precio Original" id="inputPrize" type="number" class="card-calculadora-form__input">
+                <input  placeholder="(0-100%)" id="inputDiscount" type="number" class="card-calculadora-form__input">
                 <input  placeholder="Código del cupón" id="inputCoupon" type="text" class="card-calculadora-form__input">
                 <button type="button" onClick="calcularValorDescuento()" class="card-calculadora-form__button">Calcular</button>
                 <p id="calculadora-resultado" class="card-calculadora-resultado"></p>

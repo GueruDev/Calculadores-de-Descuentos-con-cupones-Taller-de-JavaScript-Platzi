@@ -49,7 +49,49 @@ header{
     height: 4.5rem;
 }
 
-/* MAIN */
+/* AGREGAR CUPONES */
+
+.coupons{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.coupons-add{
+    width:35%;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 2px solid rgb(23, 23, 143);
+}
+.coupon-add__input{
+    display:block;
+    width: 80%;
+    margin: 1rem auto;
+    border-radius: 3px;
+}
+
+.newcoupon{
+    width: 50%;
+    margin: 2rem auto;
+}
+.newcoupon-table{
+    margin: 0 auto;
+    border-spacing: 0;
+}
+.newcoupon-tr__th,.newcoupon-tr__td{
+    font-weight: bold;
+    padding: 1rem;
+    border: 2px solid rgb(106, 106, 163);
+}
+.coupon-add__button{
+    font-family: 'Poppins',sans-serif;
+    font-weight: bold;
+    width: 40%;
+    border: 2px solid rgb(106, 106, 163);
+    border-radius: 1rem;
+    padding: 1rem 0;
+}
+/* CALCULADORA */
 
 .maintext{
     text-align: center;
@@ -78,7 +120,10 @@ header{
     text-align: center;
     font-weight:bold;
 }
-
+.card-calculadora-form__input{
+    width:95%;
+    margin: 0 auto;
+}
 .card-calculadora-form__button{
     width: 15rem;
     margin: 0 auto;
@@ -87,11 +132,12 @@ header{
     font-weight: bold;
     color: var(--white);
     border: 2px solid white;
-    border-radius: 10px;
+    border-radius: 1rem;
     background-color: rgba(255, 255, 255, 0);
 }
 
 .card-calculadora-resultado{
+    font-weight: bold;
     text-align: center;
 }
 
@@ -105,4 +151,25 @@ footer{
 .footer__a{
     font-weight: bold;
     color:rgb(23, 23, 143);
+}
+
+/* RESPONSIVE */
+
+@media (max-width:937px){
+    .coupons-add{
+        width:60%;
+    }
+}
+@media (max-width:723px){
+    .up__h1{
+        font-size: 2.2rem;
+    }
+    .coupons-add, .card-calculadora-form{
+        width:100%;
+    }
+}
+@media (max-width:500px){
+    .newcoupon{
+        width:100%;
+    }
 }

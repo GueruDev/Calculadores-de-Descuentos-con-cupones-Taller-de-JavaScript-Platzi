@@ -34,30 +34,23 @@ function comparar(){
     code = document.getElementById("inputCoupon").value;
     let compare = couponsList.find ( item => item.inputname == code);
     if (code == ""){
-        console.log("No hay cupón");
-        console.log(CouponDiscount);
     }
     else if(code === compare.inputname){
         CouponDiscount = compare.inputdiscount;
-        console.log(CouponDiscount);
     };
 };
 function calcularValorDescuento(){
     comparar();
     precioOriginal = document.getElementById("inputPrize").value;
     porcentajeDescuento = document.getElementById("inputDiscount").value;
-    console.log(CouponDiscount);
     pResultado = document.getElementById("calculadora-resultado");
     if(CouponDiscount === undefined){
         valorDescuento = (porcentajeDescuento * precioOriginal) / 100;
-        console.log(valorDescuento);
         precioConDescuento = precioOriginal - valorDescuento;
         pResultado.innerHTML = `El precio con descuento es $${precioConDescuento}.`;
     }
     else{
-        //console.log(`(${CouponDiscount} * ((${porcentajeDescuento} * ${precioOriginal})/100))/100`);
         valorDescuento = (porcentajeDescuento * precioOriginal)/100;
-        //console.log(valorDescuento);
         precioConDescuento = precioOriginal - valorDescuento;
         otherDiscount = (precioConDescuento * CouponDiscount)/100; 
         precioFinal = precioConDescuento - otherDiscount;
